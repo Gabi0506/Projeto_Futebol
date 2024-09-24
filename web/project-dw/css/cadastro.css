@@ -1,7 +1,10 @@
 
         body {
+            background-image: url('../img/WhatsApp\ Image\ 2024-09-23\ at\ 11.40.22.jpeg');
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
-            background-color: #212121;
             margin: 0;
             display: flex;
             justify-content: center;
