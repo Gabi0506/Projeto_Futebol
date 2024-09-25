@@ -73,6 +73,7 @@ async function cadastro() {
             let resposta = await api.json();
             console.log(resposta);
             alert("Cadastro realizado com sucesso!");
+            window.location.href = '../view/time.html';
         } else {
             let respostErrors = await api.json();
 
