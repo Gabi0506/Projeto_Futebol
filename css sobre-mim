@@ -6,11 +6,12 @@
 }		
 
 body{
-  background-color: #05261D;
+  background-color: #0e201a;
 }
 
 #cor{ 
   color: white;
+  font-family: 'Roboto', cursive;
   display:flex;
   text-decoration: underline;
   text-decoration-thickness: 5px;
@@ -22,21 +23,21 @@ body{
   width: 1060px;
   height: 90px;
   margin: 40px;
-  margin-top: 50px;
-  border: 2px solid white; 
+  margin-top: 50px; 
   background-color: transparent;
   color: white;
   font-size: 18px;
+  font-family: 'Roboto', cursive;
 }
 #quadrado-texto2 {
    width: 630px;
   height: 120px;
   margin: 40px;
-  margin-top: 30px;
-  border: 2px solid white; 
+  margin-top: 30px; 
   background-color: transparent;
   color: white;
   font-size: 18px;
+  font-family: 'Roboto', cursive;
 }			
 
 .minha-imagem{
@@ -51,7 +52,8 @@ body{
 #minha-texto {
   font-family: Lora;
   margin-top: -740px;
-  color: palegreen;
-  
+  color: white;
+  margin-left: 35px;
+  font-size: 20px;
   
 }
