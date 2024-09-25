@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@500&display=swap');
 
-. {
+* {
   margin: 0;
   padding: 0;
 }		
@@ -56,4 +56,30 @@ body{
   margin-left: 35px;
   font-size: 20px;
   
+}
+
+.home-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito ao passar o mouse (hover) no botão */
+.home-button:hover {
+    
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ao clicar no botão */
+.home-button:active {
+    
+    transform: scale(0.98);
 }
