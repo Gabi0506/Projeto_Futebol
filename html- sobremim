@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/sobremim.css"
+  <link rel="stylesheet" href="./sobremim.css"
 <body>
   <div>
-    <h1 id='cor'>Sobre Mim</h1>
+    <h1 id='cor'>Sobre</h1>
   </div>
   <div id='quadrado-texto'>Somos uma empresa focada no esporte futebol em que temos por finalidade deixar você acompanhando de perto tudo relacionado ao seu time preferido, como: os dias de jogos,horários, partidas, locais dos jogos, jogadores e suas posições e muito mais por meio deste site!Você pode ativar suas notificações por aqui também e assim sempre ficar atulizado as mudanças e progamações.</div>
   <p id='quadrado-texto2'>O futebol é mais do que um esporte no Brasil, é uma paixão que nos une. Ele vibra nas ruas, nos lares e nos corações de milhões. É a nossa identidade, a nossa alegria, a nossa força.Nos ensina valores como trabalho em equipe, respeito ao adversário e perseverança. Nesse site as últimas notícias, os melhores jogos, as estatísticas mais completas. Tudo sobre o mundo do futebol em um só lugar.</p>
@@ -17,14 +17,15 @@
       <h2>Nossos principais times em destaque no momento:</h2>
     </div>
     <div>
-      <video id='video' src="https://youtube.com/shorts/dQbH-tdBATM?feature=share"
-         loop muted autoplay
-         max-width: 500%; 
-         controls
-     
-             
-   ></video>
-    </div>
-    
+
+      <main>  
+        
+        <div>
+           <video autoplay muted loop width="400px" height="400px">
+                <source src="../view/img/times.mp4.mp4">
+           </video>
+           </div>
+        </div>
+      </main>
 </body>
 </html>
