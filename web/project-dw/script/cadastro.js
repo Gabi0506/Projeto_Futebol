@@ -21,6 +21,7 @@ async function cadastro() {
     password = password.value;
     birthday = birthday.value;
 
+    // Validação de campos obrigatórios
     if (!name) {
         alert("Nome é obrigatório");
         return;
@@ -31,13 +32,13 @@ async function cadastro() {
         return;
     }
 
-    if (!cpf_cnpj) {
-        alert("CPF/CNPJ é obrigatório");
+    if (!password) {
+        alert("Senha é obrigatória");
         return;
     }
 
-    if (!password) {
-        alert("Senha é obrigatório");
+    if (!cpf_cnpj) {
+        alert("CPF/CNPJ é obrigatório");
         return;
     }
 
@@ -76,10 +77,21 @@ async function cadastro() {
             let respostErrors = await api.json();
 
             // Verifique se a estrutura de erros existe antes de tentar acessar
-            if (respostErrors.data && respostErrors.data.errors && respostErrors.data.errors.cpf_cnpj) {
-                alert(respostErrors.data.errors.cpf_cnpj[0]);
+            if (respostErrors.data && respostErrors.data.errors) {
+                let errorMessage = "";
+                if (respostErrors.data.errors.cpf_cnpj) {
+                    errorMessage = respostErrors.data.errors.cpf_cnpj[0];
+                } else if (respostErrors.data.errors.password) {
+                    errorMessage = respostErrors.data.errors.password[0];
+                } else if (respostErrors.data.errors.email) {
+                    errorMessage = respostErrors.data.errors.email[0];
+                } else {
+                    errorMessage = "Erro no cadastro. Por favor, tente novamente.";
+                }
+
+                alert(errorMessage);
             } else {
-                alert("Erro no cadastro, email já cadastrado. Tente novamente.");
+                alert("Erro desconhecido. Por favor, tente novamente.");
             }
         }
     } catch (error) {
