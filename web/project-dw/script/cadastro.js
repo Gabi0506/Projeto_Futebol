@@ -26,8 +26,8 @@ async function cadastro() {
         return;
     }
 
-    if (!terms) {
-        alert("Você precisa aceitar os termos");
+    if (!email) {
+        alert("Email é obrigatório");
         return;
     }
 
@@ -46,6 +46,10 @@ async function cadastro() {
         return;
     }
 
+    if (!terms) {
+        alert("Você precisa aceitar os termos");
+        return;
+    }
 
     try {
         let api = await fetch(url, {
@@ -75,7 +79,7 @@ async function cadastro() {
             if (respostErrors.data && respostErrors.data.errors && respostErrors.data.errors.cpf_cnpj) {
                 alert(respostErrors.data.errors.cpf_cnpj[0]);
             } else {
-                alert("Erro no cadastro. Tente novamente.");
+                alert("Erro no cadastro, email já cadastrado. Tente novamente.");
             }
         }
     } catch (error) {
