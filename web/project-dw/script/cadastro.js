@@ -97,6 +97,6 @@ async function cadastro() {
         }
     } catch (error) {
         console.log("Erro na requisição:", error);
-        alert("Erro na comunicação com o servidor.");
+        alert("Erro no cadastro, CPF/CNPJ já utilizado. Por favor, tente novamente.");
     }
 }
