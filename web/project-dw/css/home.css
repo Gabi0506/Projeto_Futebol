@@ -1,6 +1,3 @@
-/*------------------------------------------------------*/
-/*                  mexendo na página no geral          */
-/*------------------------------------------------------*/
 *{
     padding: 0;
     margin: 0;
@@ -90,13 +87,11 @@ div.chamada a:hover{
     
 }
 
-/*------------------------------------------------------*/
-/*              Mexendo na foto de capa do site         */
-/*------------------------------------------------------*/
+
 header{
     max-width: 200%;
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)) ,url('../view/img/campo.png.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)) ,url('https://lh3.googleusercontent.com/pw/AP1GczP7VT27qMELgTyUdchPfI9HrbiJ2_6QKcOX7WKJLCCVk6Z92Tk8yZsJiFP3gH8vnT5AghtTo7X956DkWLz1H-OpvteO1Pr8-IJyrfySe9S9qgDTp-b6-W9vQiEVnJVZgaPBsu0sxtWa8MUmqQEB37s=w1008-h1009-s-no-gm?authuser=0');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -105,9 +100,7 @@ header{
 }
 
 
-/*------------------------------------------------------*/
-/*                exendo na menu do site                */
-/*------------------------------------------------------*/
+
 header nav#nav-esq{
     width: 100%;
     height: 60px;
@@ -118,9 +111,7 @@ header nav#nav-esq{
     align-items: center;
 }
 
-/*------------------------------------------------------*/
-/*                    Mexendo na logo                   */
-/*------------------------------------------------------*/
+
 header nav#nav-esq div#logo{
     width: 350px;
     height: 350px;
@@ -133,9 +124,6 @@ header nav#nav-esq div#logo img{
     max-height: 130%;
 }
 
-/*------------------------------------------------------*/
-/*                  Menu hamburguer                     */
-/*------------------------------------------------------*/
 
 header nav#nav-esq ul#icone-menu{
     display: none;
@@ -151,9 +139,7 @@ header nav#nav-esq ul#icone-menu li ion-icon{
     margin-right: 2rem;
 }
 
-/*------------------------------------------------------*/
-/*                   Menu principal                     */
-/*------------------------------------------------------*/
+
 header nav#nav-esq ul#menu-principal{
     margin-left: 5rem;
 
@@ -177,6 +163,8 @@ header nav#nav-esq ul#menu-principal li a{
     transition: .3s ease-out;
     right: 1000px;
     font-family: 'Lora';
+    m
+    
 }
 
 header nav#nav-esq ul#menu-principal li a:hover{
@@ -184,43 +172,4 @@ header nav#nav-esq ul#menu-principal li a:hover{
     opacity: .6;
 }
 
-/*------------------------------------------------------*/
-/*                       Chamada                        */
-/*------------------------------------------------------*/
-header div.chamada{
-    position: absolute;
-    width: 100%;
-    height: 700px;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
- 
-}
 
-header#video{
-    max-width: 20%;
-    height: 122vh;
-    transform: translate(200%, 0%);
-}
-
-.banner{
-    width: 100px;
-    height: 100px;
-    overflow:hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.banner video{
-    position:fixed;
-    top: 0px;
-    left: 0px;
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-}
-.banner .content{
-    position:relative;
-    z-index: 1;
-}
