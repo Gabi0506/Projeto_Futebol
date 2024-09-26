@@ -1,0 +1,66 @@
+
+        body {
+            background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPIzevqP177GyI5JEavuEMW9ecbYkP-oXPIcvWNocjtXLy74GBjHut-E_HkXSqY2pjTv9D5hm3pD3aSRNQiMKLzcahM7LgeJIzRjsJi2b_ve1co-CoHET47TFeYxgW3VpZMh8lhp9VkYuRGar1FCcaI9w=w1429-h1009-s-no-gm?authuser=0');
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+
+            margin-top: 40px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 14px;
+            color: #202124;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            padding: 12px;
+            border: 3px solid #dadce0;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color:#212121;
+            outline: none;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group a {
+            justify-content: center;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: #212121;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #212121;
+        }
