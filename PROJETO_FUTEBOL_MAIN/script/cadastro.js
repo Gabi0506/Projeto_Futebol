@@ -21,7 +21,7 @@ async function cadastro() {
     password = password.value;
     birthday = birthday.value;
 
-    // Validação de campos obrigatórios
+   
     if (!name) {
         alert("Nome é obrigatório");
         return;
