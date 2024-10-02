@@ -19,15 +19,12 @@ body {
     border-radius: 10%;
     box-shadow:3px 6px 20px black;
     padding: 50px;
-    width: 100%;
+    width: 50%;
     height: 95%;
-    max-width: 500px;
+    max-width: 450px;
     box-sizing: border-box;   
-    line-height: 2.0;
+    line-height: 1.8;
     margin: 30px;
-    height: 100%;
-    
-    
 }
 
 .form-group {
@@ -40,7 +37,6 @@ body {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.664);
     margin-bottom: 5px;
-
 }
 
 .form-group input {
@@ -57,7 +53,10 @@ body {
 .form-group textarea:focus {
     border-color:white;
     outline: none;
+
 }
+
+
 
 .form-group button a:hover {
     background-color: gold;
@@ -95,22 +94,31 @@ h2{
 
 ::placeholder{
     color: white;
+    margin-top: 10px;
 
 }
+
+.custom-checkbox button{
+    display: flex;               
+    height: 100vh;  
+}
+
 input[type="button"][value="Cadastre-se"] {
     background: transparent;
-    margin: 10px;
     color: white; 
     border: 2px solid white;
-    padding: 10px 31px; 
+    padding: 14px 27px; 
     cursor: pointer; 
     text-transform: uppercase;
     border-radius: 20px;
-    height: 50%;
-    
+    margin-top: 2px;
+    margin-left: 100px;
 }
+
 input[type="button"][value="Cadastre-se"]:hover{
     background-color: rgb(199, 173, 28);
+    transition: all 0.2s linear;
+  
 }
 .custom-checkbox {
     align-items: center;
