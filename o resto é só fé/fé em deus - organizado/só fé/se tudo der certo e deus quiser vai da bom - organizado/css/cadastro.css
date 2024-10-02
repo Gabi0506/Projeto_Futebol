@@ -18,13 +18,14 @@ body {
     background-color: rgba(0, 0, 0, 0.865);
     border-radius: 10%;
     box-shadow:3px 6px 20px black;
-    padding: 20px;
+    padding: 50px;
     width: 100%;
     height: 95%;
     max-width: 500px;
     box-sizing: border-box;   
     line-height: 2.0;
     margin: 30px;
+    height: 100%;
     
     
 }
@@ -39,11 +40,12 @@ body {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.664);
     margin-bottom: 5px;
+
 }
 
 .form-group input {
     padding:-1px;
-    height: 25px;
+    height: 17px;
     width:100%;
     border: none;
     font-size: 16px;
@@ -56,27 +58,6 @@ body {
     border-color:white;
     outline: none;
 }
-
-.form-group textarea {
-    resize: vertical; /* Permite redimensionar apenas na vertical */
-}
-
-
-.form-group button {
-    display: inline-block; /* Adiciona suporte para padding e centrar texto */
-    justify-content: center; /* Justifica o conteúdo */
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    background-color: white;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-    text-align: center; 
-}
-
 
 .form-group button a:hover {
     background-color: gold;
@@ -97,15 +78,47 @@ h2{
     box-shadow: 0 1px 0 0 gold;
 }
 
-input:focus + label {
-    transform: translateY(-15px);
-    transition: transform 0.2s ease; 
+.form-group input[type="text"] {
+    padding-left: 20px; /* Espaço à esquerda */
+    width: 100%; /* Largura total do contêiner */
+}
+
+.form-group input[type="password"] {
+    padding-left: 25px;
+    width: 100%; 
+    padding-top: 0px;
+}
+.form-group input[type="email"]{
+    padding-left: 25px;
+    width: 100%; 
 }
 
 ::placeholder{
     color: white;
 
 }
+input[type="button"][value="Cadastre-se"] {
+    background: transparent;
+    margin: 10px;
+    color: white; 
+    border: 2px solid white;
+    padding: 10px 31px; 
+    cursor: pointer; 
+    text-transform: uppercase;
+    border-radius: 20px;
+    height: 50%;
+    
+}
+input[type="button"][value="Cadastre-se"]:hover{
+    background-color: rgb(199, 173, 28);
+}
+.custom-checkbox {
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #007BFF;
+    border-color: #0056b3; 
 
-
-
+}
