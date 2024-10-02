@@ -1,0 +1,45 @@
+
+
+
+body {
+    background-image: url(../view/img/saopaulo.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    margin: 0;
+   
+    
+   
+    height: 100vh;
+}
+
+a {
+    padding-top: 30px;
+    padding-left: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+
+
+.titulo {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: white; 
+    padding-left: 20px;
+}
+
+.conteudo {
+    
+   padding-left: 20px;
+     
+}
+
+.texto-esquerda {
+    max-width: 900px; 
+    margin-right: 20px; 
+    color: white; 
+}
+

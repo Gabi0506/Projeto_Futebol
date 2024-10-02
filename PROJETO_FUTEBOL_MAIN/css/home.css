@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: Lora;
+    text-shadow: 4px 4px 6px black;
+    color:white;
+    margin: 240px;
+    font-size: 28px ;
+    top: -230px;
+    position: relative;
+    margin-left: 30px;
+
+}
+
+
+#texto-1 {
+    color: white;
+    margin-top: 40px;
+}
+
+h3{
+    font-family: 'Roboto', cursive;
+    text-shadow: 4px 4px 6px black ;
+    font-weight: 100;
+    font-size: max(0px, 1.5vw);
+    color: #72F285;
+    margin: 20px;
+    text-align: right;
+    position: relative;
+    top: -220px;
+    left: -110px;
+}
+
+
+
+h3{
+    font-family: 'Lora';
+    text-shadow: 4px 4px 6px black ;
+    font-weight: 100;
+    font-size: max(23px, 1.5vw);
+    color: white;
+    margin-left: 150px;
+    position:relative;
+    text-align: left;   
+    top: -450px;
+}
+
+div.chamada a{
+    font-size: max(16px, 1.8vw);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px 80px;
+    border-radius: 50px;
+    font-weight: 400;
+    background: linear-gradient(#72F285 0%, #05261D 50%, #2D7345 100%);
+    margin-top: -20px;
+}
+
+div.chamada a:hover{
+    opacity: .8;
+    color: gold;
+}
+
+
+header{
+    max-width: 400%;
+    height: 150vh;
+    background-color: black;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+header nav#nav-esq{
+    width: 100%;
+    height: 60px;
+    
+
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+
+header nav#nav-esq div#logo{
+    height: 104px;
+    width: 112px;
+
+}
+
+header nav#nav-esq div#logo img{
+    max-width: 200%;
+    max-height: 130%;
+}
+
+
+header nav#nav-esq ul#icone-menu{
+    display: none;
+}
+
+header nav#nav-esq ul#icone-menu li{
+    list-style: none;
+}
+
+header nav#nav-esq ul#icone-menu li ion-icon{
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    margin-right: 2rem;
+}
+
+
+header nav#nav-esq ul#menu-principal{
+    margin: 5px;
+    gap:28px;
+    display: flex;
+    white-space: nowrap;
+}
+
+header nav#nav-esq ul#menu-principal li{
+    list-style: none;
+    margin-right: 2rem;
+    position: relative;
+    left: 10px;
+}
+
+header nav#nav-esq ul#menu-principal li a{
+    text-decoration: none;
+    color: white;   
+    font-size: 150%;
+    padding-bottom: 20px;
+    transition: .3s ease-out;
+    right: 1000px;
+    font-family: 'Lora';
+}
+
+header nav#nav-esq ul#menu-principal li a:hover{
+    border-bottom: 1px solid white;
+    color: gold;
+    opacity: .8;
+
+}
+
+
+  .fundo-preto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: black;
+  }
+  .imagem {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    opacity: 0.6; 
+  }
+
+  ul#menu-direita{
+    list-style: none;
+    display: flex;
+    margin-left: 23%;
+    font-size: 150%;
+    color: white;
+    gap: 65px;
+    white-space: nowrap;
+    font-family:'Lora';
+  }
+  header nav#nav-esq ul#menu-direita li a{
+    text-decoration: none;
+  }
+
+a{
+    color: white;
+    justify-content: center;
+}
+
+a:hover{
+    color: gold;
+    opacity: .8;
+    border-bottom: 1px solid white;
+
+}
+ 
+  #texto-1{
+     margin-top: 370px;
+  }
+
+  .logo-imagem{
+    text-align: center;
+    height: 200px;
+    margin-left: 250px;
+    margin-top: 100px;
+    display: block;
+  }
+
+
+.times_home img {
+    margin: 100px; 
+    width: 100px; 
+}
+
+
+#imagem1 {
+    transform: translateY(-400px);
+    width: 140px;
+}
+
+#imagem2 {
+    transform: translateY(-335px);
+    width: 150px;
+}
+
+#imagem3 {
+    transform: translateY(-420px);
+    width: 100px;
+}
+
+#imagem4 {
+    transform: translateY(-415px);
+    width: 110px;
+}
+h4{
+    color: white;
+    font-family: 'Lora';
+    text-align: center;
+    font-size: 20px;
+    transform: translateY(38px);
+    
+}
+h4:hover {
+    color: gold;
+    opacity: .8;
+
+}
+.icones_home{
+    width: 100px;
+    margin: 100px; 
+}
+#icone1 {
+    transform: translateY(-560px);
+    margin-left: 1150px;
+}
+#icone2 {
+    transform: translateY(-603px);
+    margin-left: 1105px;
+    border-radius: 12%;
+    color: black;
+}
+#icone3{
+    transform: translateY(-646px);
+    margin-left: 1059px;
+    border-radius: 12%;
+    color: black;
+}
+#icone4{
+    transform: translateY(-694px);
+    margin-left: 1010px;
+    border-radius: 12%;
+    color: black;
+}
+
