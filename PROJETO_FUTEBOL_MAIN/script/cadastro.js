@@ -77,7 +77,7 @@ async function cadastro() {
         } else {
             let respostErrors = await api.json();
 
-            // Verifique se a estrutura de erros existe antes de tentar acessar
+           
             if (respostErrors.data && respostErrors.data.errors) {
                 let errorMessage = "";
                 if (respostErrors.data.errors.cpf_cnpj) {
