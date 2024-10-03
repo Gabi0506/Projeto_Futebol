@@ -1,27 +1,14 @@
 const url = 'https://go-wash-api.onrender.com/api/user';
 
 async function cadastro() {
-    let name = document.getElementById('name');
-    let terms = document.getElementById('terms');
-    let cpf_cnpj = document.getElementById('cpf_cnpj');
-    let email = document.getElementById('email');
-    let password = document.getElementById('password');
-    let birthday = document.getElementById('birthday');
+    let name = document.getElementById('name').value;
+    let terms = document.getElementById('terms').checked;
+    let cpf_cnpj = document.getElementById('cpf_cnpj').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let birthday = document.getElementById('birthday').value;
 
-    if (!name || !terms || !cpf_cnpj || !email || !password || !birthday) {
-        console.error("Um ou mais elementos não foram encontrados.");
-        alert("Erro ao acessar o formulário. Tente novamente.");
-        return;
-    }
 
-    name = name.value;
-    terms = terms.checked;
-    cpf_cnpj = cpf_cnpj.value;
-    email = email.value;
-    password = password.value;
-    birthday = birthday.value;
-
-   
     if (!name) {
         alert("Nome é obrigatório");
         return;
@@ -61,7 +48,7 @@ async function cadastro() {
                 "user_type_id": 1,
                 "password": password,
                 "cpf_cnpj": cpf_cnpj,
-                "terms": terms ? 1 : 0,
+                "terms": terms 1 : 0,
                 "birthday": birthday
             }),
             headers: {
