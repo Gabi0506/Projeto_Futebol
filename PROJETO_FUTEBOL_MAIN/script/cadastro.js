@@ -35,7 +35,7 @@ async function cadastro() {
     }
 
     if (!terms) {
-        alert("Você precisa aceitar os termos");
+        alert("Você precisa aceitar os termo");
         return;
     }
 
@@ -59,7 +59,7 @@ async function cadastro() {
         if (api.ok) {
             let resposta = await api.json();
             console.log(resposta);
-            alert("Cadastro realizado com sucesso!");
+            alert("Mensagem: " api.data);
             window.location.href = '../view/time.html';
         } else {
             let respostErrors = await api.json();
