@@ -9,6 +9,7 @@ async function cadastro() {
     let birthday = document.getElementById('birthday').value;
 
 
+   
     if (!name) {
         alert("Nome é obrigatório");
         return;
@@ -35,7 +36,7 @@ async function cadastro() {
     }
 
     if (!terms) {
-        alert("Você precisa aceitar os termo");
+        alert("Você precisa aceitar os termos");
         return;
     }
 
@@ -48,7 +49,7 @@ async function cadastro() {
                 "user_type_id": 1,
                 "password": password,
                 "cpf_cnpj": cpf_cnpj,
-                "terms": terms 1 : 0,
+                "terms": terms ? 1 : 0,
                 "birthday": birthday
             }),
             headers: {
@@ -59,7 +60,7 @@ async function cadastro() {
         if (api.ok) {
             let resposta = await api.json();
             console.log(resposta);
-            alert("Mensagem: " api.data);
+            alert("Cadastro realizado com sucesso!");
             window.location.href = '../view/time.html';
         } else {
             let respostErrors = await api.json();
