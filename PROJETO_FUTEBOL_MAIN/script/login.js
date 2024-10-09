@@ -28,7 +28,6 @@ async function login() {
             alert("Login realizado com sucesso!");
             window.location.href = '../view/home.html';
         } else {
-            // Tratamento de erros
             let errorData = await api.json();
             if (errorData.data && errorData.data.errors) {
                 let errorMessage = errorData.data.errors;
