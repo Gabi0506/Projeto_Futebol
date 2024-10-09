@@ -26,7 +26,7 @@ async function login() {
             let data = await api.json();
             localStorage.setItem("user", JSON.stringify(data));
             alert("Login realizado com sucesso!");
-            window.location.href = '../view/home.html';
+            window.location.href = '../view/index.html';
         } else {
             let errorData = await api.json();
             if (errorData.data && errorData.data.errors) {
