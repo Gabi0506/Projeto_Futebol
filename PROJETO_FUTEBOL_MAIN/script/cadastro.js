@@ -49,7 +49,7 @@ async function cadastro() {
                 "user_type_id": 1,
                 "password": password,
                 "cpf_cnpj": cpf_cnpj,
-                "terms": terms ? 1 : 0,
+                "terms": terms,
                 "birthday": birthday
             }),
             headers: {
@@ -60,7 +60,7 @@ async function cadastro() {
         if (api.ok) {
             let resposta = await api.json();
             console.log(resposta);
-            alert("Cadastro realizado com sucesso!");
+            alert(resposta.data);
             window.location.href = '../view/login.html';
         } else {
             let respostErrors = await api.json();
