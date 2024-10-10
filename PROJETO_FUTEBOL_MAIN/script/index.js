@@ -11,7 +11,7 @@ async function cadastroEndereco() {
  
     let user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.access_token) {
-        alert("Você precisa estar logado para cadastrar um endereço.");
+        alert("Você precisa estar logado.");
         window.location.href = '../view/login.html';
         return;
     }
