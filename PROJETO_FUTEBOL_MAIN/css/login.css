@@ -20,7 +20,7 @@ body {
     box-shadow:3px 6px 20px black;
     padding: 50px;
     width: 50%;
-    height: 70%;
+    height: 45%;
     max-width: 450px;
     box-sizing: border-box;   
     line-height: 1.8;
@@ -107,11 +107,11 @@ input[type="button"][value="Login"] {
     background: transparent;
     color: white; 
     border: 2px solid white;
-    padding: 20px 27px; 
+    padding: 14px 27px; 
     cursor: pointer; 
     text-transform: uppercase;
     border-radius: 20px;
-    margin-top: 20px;
+    margin-top: 2px;
     margin-left: 10px;
 }
 
