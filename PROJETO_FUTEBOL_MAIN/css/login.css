@@ -131,15 +131,20 @@ custom-checkbox input[type="checkbox"]:checked + .checkmark {
 
 }
 
-.home-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
+.home-buttom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
     color: white;
-    border-radius: 10px;
     text-decoration: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid white;
     transition: background-color 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-buttom:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
