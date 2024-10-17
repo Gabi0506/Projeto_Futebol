@@ -133,7 +133,7 @@ custom-checkbox input[type="checkbox"]:checked + .checkmark {
 
 a.home-botao {
 
-    margin-top: -70vh;
+    margin-top: 0vh;
     padding: 15px 30px;
     font-size: 18px;
     font-weight: bold;
@@ -147,12 +147,29 @@ a.home-botao {
 }
 
 
-nav a {
-    color: #fff;
-    padding: 1.5rem;
-    text-decoration: none;
-    font-size: 2.0rem; /* Reduz o tamanho da fonte em telas menores */
-    font-family: "Bona Nova", serif;
-    font-weight: 700;
-    font-style: normal;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
 }
+
+.home-botao {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: background-color 0.3s ease;
+}
+
+.home-botao:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
