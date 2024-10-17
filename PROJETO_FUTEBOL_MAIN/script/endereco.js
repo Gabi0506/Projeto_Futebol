@@ -8,7 +8,13 @@ async function cadastroEndereco() {
     let number = document.getElementById('number').value;
     let complement = document.getElementById('complement').value;
 
- 
+
+    if (!title || !cep || !address || !number){
+        alert("Preencha todos os campos, com dados existentes!")
+        return
+    }    
+
+
     let user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.access_token) {
         alert("Você precisa estar logado ");
