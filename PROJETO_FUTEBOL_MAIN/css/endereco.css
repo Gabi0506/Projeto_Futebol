@@ -115,3 +115,21 @@ input[type="button"][value="Cadastrar Endereço"]:hover{
     transition: all 0.2s linear;
   
 }
+
+.home-buttom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: background-color 0.3s ease;
+}
+
+.home-buttom:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
