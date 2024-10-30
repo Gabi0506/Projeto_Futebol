@@ -2,6 +2,7 @@ const urlList = 'https://go-wash-api.onrender.com/api/auth/address';
 
 async function listarEnderecos() {
     let user = JSON.parse(localStorage.getItem("user"));
+    
     if (!user || !user.access_token) {
         alert("Você precisa estar logado");
         window.location.href = '../view/login.html';
@@ -13,13 +14,13 @@ async function listarEnderecos() {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': Bearer ${user.access_token}
+                'Authorization': `Bearer ${user.access_token}`
             }
         });
 
         if (api.ok) {
             let data = await api.json();
-            displayEnderecos(data);
+            displayEnderecos(data);  // Função para exibir os endereços na tela
         } else {
             const errorText = await api.text();
             console.error("Erro ao buscar endereços:", errorText);
@@ -33,32 +34,23 @@ async function listarEnderecos() {
 
 // Função para exibir os endereços no HTML
 function displayEnderecos(enderecos) {
-    const enderecosBody = document.getElementById('enderecosBody');
-    const noEnderecosMessage = document.getElementById('noEnderecosMessage');
-    
-    if (!enderecosBody || !noEnderecosMessage) {
-        console.error("Elemento não encontrado no DOM.");
-        return;
-    }
-
-    enderecosBody.innerHTML = '';  // Limpar conteúdo existente
+    const enderecosContainer = document.getElementById('enderecosContainer');
+    enderecosContainer.innerHTML = '';  // Limpar conteúdo existente
 
     if (enderecos.length === 0) {
-        noEnderecosMessage.style.display = 'block';  // Exibe a mensagem "Nenhum endereço"
+        enderecosContainer.innerHTML = '<p>Você ainda não cadastrou nenhum endereço.</p>';
         return;
-    } else {
-        noEnderecosMessage.style.display = 'none';  // Oculta a mensagem se houver endereços
     }
 
     enderecos.forEach(endereco => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${endereco.title}</td>
-            <td>${endereco.address}</td>
-            <td>${endereco.number}</td>
-            <td>${endereco.cep}</td>
-            <td>${endereco.complement || "N/A"}</td>
+        const enderecoElement = document.createElement('div');
+        enderecoElement.classList.add('endereco-item');
+        enderecoElement.innerHTML = `
+            <h3>${endereco.title}</h3>
+            <p>${endereco.address}, ${endereco.number}</p>
+            <p>CEP: ${endereco.cep}</p>
+            <p>Complemento: ${endereco.complement || "N/A"}</p>
         `;
-        enderecosBody.appendChild(row);
+        enderecosContainer.appendChild(enderecoElement);
     });
 }
