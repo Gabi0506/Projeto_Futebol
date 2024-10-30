@@ -61,7 +61,7 @@ async function cadastro() {
             let resposta = await api.json();
             console.log(resposta);
             alert(resposta.data);
-            window.location.href = '../view/login.html';
+            window.location.href = '../view/home.html';
         } else {
             let respostErrors = await api.json();
 
