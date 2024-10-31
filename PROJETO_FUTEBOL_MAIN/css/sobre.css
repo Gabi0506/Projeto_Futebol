@@ -3,20 +3,19 @@
 * {
   margin: 0;
   padding: 0;
-}		
+}   
 
 body{
   background-color: #000000;
   margin-bottom: 10px;
   background-image: url(../view/img/image\ 4.png);
   background-repeat: no-repeat;
-
-}
+  background-size: 1000px;}
 
 .logo {
   width: 230px;
   height: 210px;
-  margin-top: -210px;
+  margin-top: -760px;
 }
 
 
@@ -30,7 +29,7 @@ body{
   font-family: Lora; 
   font-size: 30px;
   align-items: center;
-}	
+} 
 
 #quadrado-texto { 
   width: 1400px;
@@ -40,6 +39,30 @@ body{
   background-color: transparent;
   color: white;
   font-size: 26px;
+  font-family: Lora;
+}
+
+#quadrado-texto2 { 
+  width: 1400px;
+  height: 90px;
+  margin: 50px;
+  margin-top: 270px; 
+  padding-left: 50px;
+  background-color: transparent;
+  color: white;
+  font-size: 21px;
+  font-family: Lora;
+}
+
+#quadrado-texto3 { 
+  width: 1400px;
+  height: 90px;
+  margin: 50px;
+  padding-top: -50px;
+  padding-left: 700px;
+  background-color: transparent;
+  color: white;
+  font-size: 21px;
   font-family: Lora;
 }
 
@@ -93,17 +116,16 @@ body{
   width: 80%; /* Largura da linha */
   margin-left: auto; /* Centraliza a linha */
   margin-right: auto; /* Centraliza a linha */
-  margin-top: 150px;
-  margin-bottom: 820px;
+  margin-top: 180px;
+  margin-bottom: 780px;
 }
 
 .vertical { 
   border-left: 2px solid rgb(255, 255, 255); /* Define a linha vertical */ 
-  height: 100vh; /* Altura da linha: 100% da altura da página */ 
+  height: 13vh; /* Altura da linha: 100% da altura da página */ 
   position: absolute; /* Para permitir o posicionamento */ 
   left: 50%; /* Posiciona no meio da página */ 
-  top: 0; /* Início no topo da página */
-}
+  top: 0; /* Início no topo da página */}
 
 /* Efeito ao passar o mouse (hover) no botão */
 .home-button:hover {
