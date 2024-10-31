@@ -15,7 +15,9 @@
 .home-botao:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
-
+h1{
+    color: white;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -39,4 +41,35 @@ th {
     text-align: center;
     font-size: 18px;
     margin-top: 20px;
+}
+body {
+    background-color: black;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    margin-top: -160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-buttom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: background-color 0.3s ease;
+}
+
+.home-buttom:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
