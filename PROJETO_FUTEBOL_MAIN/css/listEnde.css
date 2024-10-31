@@ -16,7 +16,7 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 h1{
-    color: white;
+    color: black;
 }
 table {
     width: 100%;
@@ -43,7 +43,7 @@ th {
     margin-top: 20px;
 }
 body {
-    background-color: black;
+    background-color: white;
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
