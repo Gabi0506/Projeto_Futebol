@@ -1,21 +1,37 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset='utf-8'>
-    <title>Lista de endereço</title>
+    <title>Lista de Endereço</title>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/listEnde.css'>
-    <script defer src='../script/listEnde.js'></script> 
+    <script defer src='../script/listEnd.js'></script> 
 </head>
 <body>
     <a href="home.html" class="home-buttom">Home</a>
-
-</head>
-<body>
-
+    
     <h1>Endereços Cadastrados</h1>
 
-    <table id="enderecosTable">
+    <form id="formEndereco" style="display:none;">
+        <input type="hidden" id="enderecoId">
+        <label for="title">Título:</label>
+        <input type="text" id="title" required>
+        <br>
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" required>
+        <br>
+        <label for="number">Número:</label>
+        <input type="text" id="number" required>
+        <br>
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" required>
+        <br>
+        <label for="complement">Complemento:</label>
+        <input type="text" id="complement">
+        <br>
+        <button type="submit">Atualizar Endereço</button>
+    </form>
+    
+    <table>
         <thead>
             <tr>
                 <th>Título</th>
@@ -23,16 +39,15 @@
                 <th>Número</th>
                 <th>CEP</th>
                 <th>Complemento</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody id="enderecosBody">
+            <!-- Os endereços serão preenchidos aqui -->
         </tbody>
     </table>
 
+    <button onclick="listarEndereco()">Listar Endereços</button>
 
-    <button onclick="listarEnderecos()">Listar Endereços</button>
-
-    <div id="enderecosContainer"></div>
-    <script src="../script/listEnde.js"></script>
 </body>
 </html>
