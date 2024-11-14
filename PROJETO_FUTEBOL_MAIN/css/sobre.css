@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  height: 0;
 }   
 
 body{
@@ -10,12 +11,12 @@ body{
   margin-bottom: 10px;
   background-image: url(../view/img/image\ 4.png);
   background-repeat: no-repeat;
-  background-size: 1000px;}
+  background-size: 1280px 590px;}
 
 .logo {
   width: 230px;
   height: 210px;
-  margin-top: -760px;
+  margin-top: -440px;
 }
 
 
@@ -32,10 +33,11 @@ body{
 } 
 
 #quadrado-texto { 
-  width: 1400px;
+  width: 142vh;
   height: 90px;
   margin: 50px;
-  margin-top: 120px; 
+  margin-top: 250px; 
+  margin-bottom: 200px;
   background-color: transparent;
   color: white;
   font-size: 26px;
@@ -43,11 +45,9 @@ body{
 }
 
 #quadrado-texto2 { 
-  width: 1400px;
-  height: 90px;
-  margin: 50px;
-  margin-top: 270px; 
-  padding-left: 50px;
+  width: 300px;
+  height: 0vh; 
+  padding-left: 120px;
   background-color: transparent;
   color: white;
   font-size: 21px;
@@ -55,11 +55,9 @@ body{
 }
 
 #quadrado-texto3 { 
-  width: 1400px;
-  height: 90px;
-  margin: 50px;
-  padding-top: -50px;
-  padding-left: 700px;
+  width: 350px;
+  height: 0vh;
+  padding-left: 790px;
   background-color: transparent;
   color: white;
   font-size: 21px;
@@ -119,13 +117,6 @@ body{
   margin-top: 180px;
   margin-bottom: 780px;
 }
-
-.vertical { 
-  border-left: 2px solid rgb(255, 255, 255); /* Define a linha vertical */ 
-  height: 13vh; /* Altura da linha: 100% da altura da página */ 
-  position: absolute; /* Para permitir o posicionamento */ 
-  left: 50%; /* Posiciona no meio da página */ 
-  top: 0; /* Início no topo da página */}
 
 /* Efeito ao passar o mouse (hover) no botão */
 .home-button:hover {
