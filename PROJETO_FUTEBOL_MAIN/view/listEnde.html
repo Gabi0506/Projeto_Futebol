@@ -4,11 +4,14 @@
     <meta charset='utf-8'>
     <title>Lista de Endereço</title>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/listEnde.css'>
-    <script defer src='../script/listEnde.js'></script> 
+    <script defer src='../script/listEnd.js'></script> 
 </head>
 <body>
     <a href="home.html" class="home-buttom">Home</a>
+    <button id="logoutBtn" class="logout-button">Logout</button>   
     
+    <p id="response"></p>
+
     <h1>Endereços Cadastrados</h1>
 
     <form id="formEndereco" style="display:none;">
@@ -30,7 +33,7 @@
         <br>
         <button type="submit">Atualizar Endereço</button>
         <button type="button" onclick="cancelarEdicao()">Cancelar</button>
-        <script defer src="../script/listEnde.js"></script>
+        <script defer src="../script/listEnd.js"></script>
     </form>
     
     <table>
@@ -50,7 +53,7 @@
     </table>
 
     <button onclick="listarEndereco()">Listar Endereços</button>
-    <script defer src="../script/listEnde.js"></script>
+    <script defer src="../script/listEnd.js"></script>
 
     
   
