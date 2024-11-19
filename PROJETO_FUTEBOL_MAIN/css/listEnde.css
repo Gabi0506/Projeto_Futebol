@@ -1,4 +1,43 @@
 
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: black;
+    margin-top: 50px;
+}
+
+.home-buttom, .logout-buttom {
+    position: absolute;
+    top: 10px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(10, 10, 10);
+    transition: background-color 0.3s ease;
+}
+
+.home-buttom {
+    left: 10px; /* Botão Home à esquerda */
+}
+
+.logout-buttom {
+    right: 10px; /* Botão Logout à direita */
+}
+
+.home-buttom:hover, .logout-buttom:hover {
+    background-color: rgba(14, 14, 14, 0.2);
+}
+
 h1{
     color: black;
 }
@@ -40,20 +79,33 @@ body {
     height: 100vh;
 }
 
-.home-buttom {
+
+h1 {
+    margin-top: 50px;
+    color: black;
+}
+
+.home-button, .logout-button {
     position: absolute;
     top: 10px;
-    left: 10px;
     font-size: 16px;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     background-color: transparent;
     padding: 10px 15px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid rgb(10, 10, 10);
     transition: background-color 0.3s ease;
 }
 
-.home-buttom:hover {
-    background-color: rgba(61, 61, 61, 0.2);
+.home-button {
+    left: 10px; 
+}
+
+.logout-button {
+    right: 10px; 
+}
+
+.home-button:hover, .logout-button:hover {
+    background-color: rgba(14, 14, 14, 0.2);
 }
