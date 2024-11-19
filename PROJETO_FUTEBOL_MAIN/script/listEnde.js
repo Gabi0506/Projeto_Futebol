@@ -36,7 +36,7 @@ async function listarEndereco() {
 
 function preencherTabelaEnderecos(enderecos) {
     const enderecosBody = document.getElementById('enderecosBody');
-    enderecosBody.innerHTML = ''; 
+    enderecosBody.innerHTML = ''; // Limpa a tabela
 
     enderecos.forEach(endereco => {
         let row = document.createElement('tr');
@@ -48,19 +48,18 @@ function preencherTabelaEnderecos(enderecos) {
             <td>${endereco.cep}</td>
             <td>${endereco.complement}</td>
             <td>
-                <button onclick="editarEndereco(${endereco.id}, '${endereco.title}', '${endereco.address}', '${endereco.number}', '${endereco.cep}', '${endereco.complement}')">
-                    Editar
-                </button>
+                <button onclick="editarEndereco(${endereco.id}, '${endereco.title}', '${endereco.address}', '${endereco.number}', '${endereco.cep}', '${endereco.complement}')">Editar</button>
+                <button onclick="DeletarEndereço(${endereco.id}, this)">Deletar</button>
             </td>
         `;
 
         enderecosBody.appendChild(row);
     });
 }
+
 document.querySelector('button').addEventListener('click', listarEndereco);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 function editarEndereco(id, title, address, number, cep, complement) {
     document.getElementById('formEndereco').style.display = 'block';
@@ -115,3 +114,44 @@ async function atualizarEndereco(event) {
 }
 
 document.getElementById('formEndereco').addEventListener('submit', atualizarEndereco);
+
+// Função para cancelar a edição
+const cancelarEdicao = () => {
+    document.getElementById('formEndereco').style.display = 'none'; // Esconde o formulário
+};
+
+// Função para excluir o endereço da tabela e da API
+const DeletarEndereço = async (id, button) => {
+    if (!id) {
+        console.error("ID inválido:", id);  // Log para depuração
+        return;
+    }
+
+    try {
+        const userToken = JSON.parse(localStorage.getItem("user")).access_token;
+        const url = `https://go-wash-api.onrender.com/api/auth/address/${id}`;
+
+        // Faz a requisição DELETE para a API
+        const resposta = await fetch(url, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + userToken
+            }
+        });
+
+        // Verifica se a requisição foi bem-sucedida
+        if (resposta.ok) {
+            alert("Endereço deletado com sucesso!");
+            // Remove a linha correspondente ao botão clicado
+            const row = button.closest('tr');  // Encontra o <tr> mais próximo do botão clicado
+            row.remove();  // Remove a linha da tabela imediatamente
+        } else {
+            const erro = await resposta.text();
+            console.error(`Erro ao deletar o endereço: ${resposta.status}. Detalhes: ${erro}`);
+        }
+    } catch (error) {
+        console.error("Erro na requisição:", error);
+        alert("Ocorreu um erro ao tentar deletar o endereço.");
+    }
+};
