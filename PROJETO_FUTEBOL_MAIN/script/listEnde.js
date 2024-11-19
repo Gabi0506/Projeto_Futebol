@@ -71,6 +71,7 @@ function editarEndereco(id, title, address, number, cep, complement) {
     document.getElementById('complement').value = complement;
 }
 
+
 async function atualizarEndereco(event) {
     event.preventDefault();
 
@@ -81,6 +82,12 @@ async function atualizarEndereco(event) {
     let number = document.getElementById('number').value;
     let cep = document.getElementById('cep').value;
     let complement = document.getElementById('complement').value;
+
+    if (!title || !cep || !address || !number){
+        alert("Preencha todos os campos, com dados existentes!")
+        return
+    }    
+
 
     try {
         let api = await fetch(`${url}/${id}`, {
@@ -115,15 +122,14 @@ async function atualizarEndereco(event) {
 
 document.getElementById('formEndereco').addEventListener('submit', atualizarEndereco);
 
-// Função para cancelar a edição
+
 const cancelarEdicao = () => {
-    document.getElementById('formEndereco').style.display = 'none'; // Esconde o formulário
+    document.getElementById('formEndereco').style.display = 'none'; 
 };
 
-// Função para excluir o endereço da tabela e da API
 const DeletarEndereço = async (id, button) => {
     if (!id) {
-        console.error("ID inválido:", id);  // Log para depuração
+        console.error("ID inválido:", id);  
         return;
     }
 
@@ -131,7 +137,7 @@ const DeletarEndereço = async (id, button) => {
         const userToken = JSON.parse(localStorage.getItem("user")).access_token;
         const url = `https://go-wash-api.onrender.com/api/auth/address/${id}`;
 
-        // Faz a requisição DELETE para a API
+        
         const resposta = await fetch(url, {
             method: "DELETE",
             headers: {
@@ -140,12 +146,12 @@ const DeletarEndereço = async (id, button) => {
             }
         });
 
-        // Verifica se a requisição foi bem-sucedida
+        
         if (resposta.ok) {
             alert("Endereço deletado com sucesso!");
-            // Remove a linha correspondente ao botão clicado
-            const row = button.closest('tr');  // Encontra o <tr> mais próximo do botão clicado
-            row.remove();  // Remove a linha da tabela imediatamente
+            
+            const row = button.closest('tr');  
+            row.remove();  
         } else {
             const erro = await resposta.text();
             console.error(`Erro ao deletar o endereço: ${resposta.status}. Detalhes: ${erro}`);
@@ -155,3 +161,38 @@ const DeletarEndereço = async (id, button) => {
         alert("Ocorreu um erro ao tentar deletar o endereço.");
     }
 };
+
+/////////////////////     LOGOUT     /////////////////////////////////////////////
+
+
+document.getElementById('logoutBtn').addEventListener('click', async () => {
+    const apiUrl = 'https://go-wash-api.onrender.com/api/auth/logout';
+    const token = JSON.parse(localStorage.getItem("user"))?.access_token; 
+
+    if (!token) {
+        alert("Usuário já está deslogado ou token inválido.");
+        window.location.href = '../view/index.html'; 
+        return;
+    }
+
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (response.ok) {
+            alert('Logout realizado com sucesso!');
+            localStorage.removeItem("user"); 
+            window.location.href = '../view/index.html'; 
+        } else {
+            alert('Erro ao realizar o logout. Verifique sua conexão ou tente novamente.');
+        }
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao realizar o logout.');
+    }
+});
