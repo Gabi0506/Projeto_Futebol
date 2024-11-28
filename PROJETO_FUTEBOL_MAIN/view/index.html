@@ -5,43 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/index.css">
-
+  <link rel="stylesheet" href="../css/clima.css">
+  <title>VibraFut - Previsão do Tempo</title>
 </head>
 <body>
-   <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="../view/sobre.html">Sobre</a></li>
-    <li>
-        <img  class="logo" src="img/vibrafut-removebg.png" alt="Logo" class="logo"> <!-- Adicione sua logo aqui -->
-    </li>
-    <li><a href="../view/login.html">Login</a></li>
-    <li><a href="../view/cadastro.html">Cadastre-se</a></li>
-  </ul>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="../view/sobre.html">Sobre</a></li>
+      <li>
+        <img class="logo" src="img/vibrafut-removebg.png" alt="Logo"> 
+      </li>
+      <li><a href="../view/login.html">Login</a></li>
+      <li><a href="../view/cadastro.html">Cadastre-se</a></li>
+    </ul>
+    <p class="texto-meio">Venha vibrar com o seu time!
+      <strong>VibraFut</strong> oferece auxílio para todos os fanáticos de futebol,
+      principalmente para os torcedores dos <strong>4 maiores clubes paulistas.</strong><br>
+      Escolha o seu time paulista do coração e tenha um site personalizado!
+    </p>
+    <h1 id="frase-pele">"O futebol é a vida em um campo de jogo: <span class="palavra-destacar">é alegria, tristeza, amor e dor.</span><br> E, no final, tudo se resume a uma única paixão!"
+      <br><span class="palavra-destacar">Diego Maradona.</span>
+    </h1>
+    <hr class="divisoria">
+  </nav>
 
+  <section id="tempo">
+    <h2>Previsão do Tempo</h2>
+    <div id="card-tempo">
+      <p>Carregando previsão...</p>
+    </div>
+  </section>
 
-<p class="texto-meio">Venha vibrar com o seu time!
-    <strong>VibraFut</strong> oferece auxílio para todos os fanáticos de futebol,
-    principalmente para os torcedores dos <strong>4 maiores clubes paulistas.</strong><br>
-    
-    <br> Escolha o seu time paulista do coração e tenha um site personalizado para cada escolha além da história,
-     títulos e jogadores da era!</p>
-
-<h1 id="frase-pele">"O futebol é a vida em um campo de jogo: <span class="palavra-destacar">é alegria, tristeza, amor e dor.</span><br> E, no final, tudo se resume a uma única paixão!"
-    <br><span class="palavra-destacar">Diego Maradona.</span></h1>
-
-<hr class="divisoria">
-</nav>
-
-
-<footer id="footer-text">Fale Conosco:
-    <img  class="imagens-footer" src="img/facebook.png">
-    <img  class="imagens-footer" src="img/instagram.png">
-    <img class="tik-tok" src="img/tiktok.png">
-</footer>
-
+  <footer id="footer-text">Fale Conosco:
+    <img class="imagens-footer" src="img/facebook.png" alt="Facebook">
+    <img class="imagens-footer" src="img/instagram.png" alt="Instagram">
+    <img class="tik-tok" src="img/tiktok.png" alt="TikTok">
+  </footer>
+ 
+  <script src="../script/clima.js"></script>
 </body>
-
-
 </html>
-
