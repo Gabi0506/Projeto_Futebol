@@ -1,0 +1,37 @@
+#tempo {
+    text-align: center;
+    margin: 20px;
+}
+ 
+#tempo h2{
+color: white;
+margin-top: 60px;
+}
+#card-tempo {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-top: 50px;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    width: 400px;
+    font-family: Arial, sans-serif;
+}
+  
+#card-tempo img {
+    width: 80px;
+    height: 80px;
+}
+  
+#card-tempo h3 {
+    margin: 10px 0;
+}
+  
+#card-tempo p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+  
